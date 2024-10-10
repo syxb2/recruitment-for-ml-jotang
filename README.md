@@ -1,6 +1,8 @@
 ## RECRUITMENT_FOR_ML_JOTANG
 
-> baijiale
+> **注：本仓库专用于解决 招新题8机器学习 的任务**
+
+> Github link: [https://github.com/syxb2/recruitment_for_ml_jotang](https://github.com/syxb2/recruitment_for_ml_jotang)
 
 ### ABOUT Environment
 
@@ -11,6 +13,7 @@
 * scikit-learn
 * pandas
 * numpy
+* torchvision
 
 机器环境：
 
@@ -55,6 +58,7 @@ packaging         24.1
 pandas            2.2.3
 parso             0.8.4
 pexpect           4.9.0
+pillow            10.4.0
 pip               24.2
 platformdirs      4.3.6
 prompt_toolkit    3.0.48
@@ -73,6 +77,7 @@ stack-data        0.6.3
 sympy             1.13.3
 threadpoolctl     3.5.0
 torch             2.4.1
+torchvision       0.19.1
 tornado           6.4.1
 traitlets         5.14.3
 typing_extensions 4.12.2
