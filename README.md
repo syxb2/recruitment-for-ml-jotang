@@ -16,6 +16,8 @@
 
 * MacOS Sequoia（15）
 
+shell 输出：
+
 
 ```sh
 $ python --version
