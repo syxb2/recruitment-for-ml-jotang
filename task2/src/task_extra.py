@@ -119,7 +119,7 @@ def train() -> list:
         print(
             f"Epoch [{epoch + 1}/{num_epochs}], Loss: {loss:.4f}, Accuracy: {accuracy:.2f}%"
         )
-    print(results)
+    # print(results)
 
     return results
 
