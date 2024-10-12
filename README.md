@@ -14,6 +14,7 @@
 * pandas
 * numpy
 * torchvision
+* matplotlib
 
 机器环境：
 
@@ -35,11 +36,14 @@ Package           Version
 appnope           0.1.4
 asttokens         2.4.1
 comm              0.2.2
+contourpy         1.3.0
+cycler            0.12.1
 debugpy           1.8.6
 decorator         5.1.1
 exceptiongroup    1.2.2
 executing         2.1.0
 filelock          3.16.1
+fonttools         4.54.1
 fsspec            2024.9.0
 ipykernel         6.29.5
 ipython           8.28.0
@@ -48,7 +52,9 @@ Jinja2            3.1.4
 joblib            1.4.2
 jupyter_client    8.6.3
 jupyter_core      5.7.2
+kiwisolver        1.4.7
 MarkupSafe        3.0.0
+matplotlib        3.9.2
 matplotlib-inline 0.1.7
 mpmath            1.3.0
 nest-asyncio      1.6.0
@@ -66,6 +72,7 @@ psutil            6.0.0
 ptyprocess        0.7.0
 pure_eval         0.2.3
 Pygments          2.18.0
+pyparsing         3.1.4
 python-dateutil   2.9.0.post0
 pytz              2024.2
 pyzmq             26.2.0
@@ -84,4 +91,3 @@ typing_extensions 4.12.2
 tzdata            2024.2
 wcwidth           0.2.13
 ```
-
