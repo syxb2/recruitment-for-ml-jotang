@@ -16,6 +16,8 @@
 * torchvision
 * matplotlib
 
+in `./requirements.txt`
+
 机器环境：
 
 * MacOS Sequoia（15）
