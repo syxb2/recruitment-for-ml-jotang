@@ -1,10 +1,23 @@
 ## RECRUITMENT_FOR_ML_JOTANG
 
-> **注：本仓库专用于解决 招新题8机器学习 的任务**
+> **注：本仓库专用于解决`焦糖工作室招新题 8 机器学习`的题目**
 
 > Github link: [https://github.com/syxb2/recruitment_for_ml_jotang](https://github.com/syxb2/recruitment_for_ml_jotang)
 
-### ABOUT Environment
+### Usage
+
+```sh
+$ git clone https://github.com/syxb2/recruitment_for_ml_jotang.git
+
+$ cd recruitment_for_ml_jotang
+
+$ pip install -r requirements.txt
+```
+
+* 推荐使用 `VScode` 打开本仓库。python 解释器选择 `虚拟环境 .venv`
+* Jupyter Note 文件（`.ipynb`）推荐使用 github 网页预览。
+
+### MyEnvironment
 
 已安装的包：
 
@@ -22,7 +35,13 @@ in `./requirements.txt`
 
 * MacOS Sequoia（15）
 
-shell 输出：
+虚拟环境：
+
+* 使用 venv 创建 python 虚拟环境。
+
+所用编辑器：
+
+* Visual Studio Code
 
 
 ```sh
