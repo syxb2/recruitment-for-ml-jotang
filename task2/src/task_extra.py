@@ -13,9 +13,16 @@ import numpy as np
 # device = torch.device(
 #     "cuda" if torch.cuda.is_available() else "cpu"
 # )
-device = torch.device(
-    "mps" if torch.backends.mps.is_available else "cpu"
-)  # for MacOS, GPU is mps instead of cuda
+# device = torch.device(
+#     "mps" if torch.backends.mps.is_available else "cpu"
+# )  # for MacOS, GPU is mps instead of cuda
+
+if torch.cuda.is_available():
+    device = torch.device("cuda")
+elif torch.backends.mps.is_available():
+    device = torch.device("mps")
+else:
+    device = torch.device("cpu")
 
 # TODO:解释参数含义，在?处填入合适的参数
 batch_size = 64  # 每次小型迭代时传递给模型的样本数量

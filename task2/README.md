@@ -1,6 +1,6 @@
 ## 思考题
 
-> 注：详细笔记和思考见文件：`./image_classification.ipynb`（**可以通过 github 预览**）
+> 注：详细笔记和思考见文件：[【点击跳转】image_classification.ipynb](./image_classification.ipynb)（**可以通过 github 预览**）
 
 ### 1. 计算机采用什么数据结构存储、处理图像？
 

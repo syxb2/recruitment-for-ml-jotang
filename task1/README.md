@@ -1,6 +1,6 @@
 # README
 
-> 本题的笔记详见 `housing_price_forecast.ipynb`
+> 本题的笔记详见 [【点击跳转】housing_price_forecast.ipynb](./housing_price_forecast.ipynb)
 
 ### 实验报告
 
