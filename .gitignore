@@ -4,5 +4,7 @@
 
 .DS_Store
 
+*.zip
+
 # 忽略下载的数据集
 /task2/data/*
