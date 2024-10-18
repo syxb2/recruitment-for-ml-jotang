@@ -42,9 +42,13 @@ Attention机制用于神经网络中，帮助模型专注于输入序列中对�
 
 例如，经典的自注意力机制（self-attention）可以让模型在处理当前单词时，考虑整个输入序列中其他单词的上下文信息。
 
+> 详见 [【点击跳转】Task3/README.md](../task3/README.md)
+
 #### Transformer
 
 Transformer是一个由Google提出的神经网络架构，广泛应用于NLP任务。它依赖于自注意力机制，能够并行处理整个输入序列，而不像传统的RNN依赖序列信息的逐步处理。Transformer包括编码器和解码器结构，用来处理不同的任务，如翻译、文本生成等。
+
+> 详见 [【点击跳转】Task3/README.md](../task3/README.md)
 
 #### 自回归模型
 

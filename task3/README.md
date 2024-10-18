@@ -1,8 +1,12 @@
-# Task3.1
+# Task3.0
 
 > 论文代码 github 地址：[https://github.com/google-research/vision_transformer](https://github.com/google-research/vision_transformer)
 
 ## Overall understanding of transformer
+
+### 0、什么是 Transformer
+
+是一种可以根据上文预测下一个要输出内容的模型。
 
 > [https://www.bilibili.com/video/BV13z421U7cs](https://www.bilibili.com/video/BV13z421U7cs)
 
@@ -170,9 +174,9 @@ $$
 
 > [【点击跳转】scaled_dot_product_attention.ipynb](./scaled_dot_product_attention.ipynb)
 
-
-
 <!-- 不得不说，3b1b 真是神 -->
+
+# Task3.1
 
 ## The Paper
 
@@ -184,12 +188,15 @@ $$
 
 1. 先将二维图像展平（因为 transformer 接受 1 维矩阵作为输入）：将图像分为多个固定大小的 patch（大小为 $P*P$，则 patch 数量为 $H*W/P^2$）。每个 patch 即为展平后向量的一个项。
 2. 然后添加一个可训练的线性层，将每个图像块分别映射为 D 维向量（因为 Transformer 接受的向量大小始终为 D）
-    * 类似于 NLP 中的词嵌入，将离散的词汇转化为连续的向量。
+    * 类似于 NLP（Natural Language Processing）中的词嵌入，将离散的词汇转化为连续的向量。
+    * 一个图像块就相当于 NLP 中的一个 token
 3. 在第 2 步的线性层的每个输出向量中给加上一个可学习的位置信息。（因为 transformer 对数据之间的位置关系不敏感，相对而言 CNN 则对位置敏感）
-4. 在第 2 步的线性层的输出中添加一个独立的 token 向量（图中 0*），作为一个 class token，它通过 Transformer 层进行处理，作为整个图像的类别进行输出。
+4. 在第 2 步的线性层的输出中添加一个独立的 “token” 向量（图中 0*），作为一个 class token，它通过 Transformer 层进行处理，作为整个图像的类别进行输出。
 5. 将这个线性层的输出送入 transformer encoder。
-    * 此模型的 transformer 由多个多头自注意力层（Multi-Headed Self-Attention, MSA）和前馈神经网络层（MLP）组成。每层还包括Layernorm（层归一化）和残差连接。[【点击跳转】explanation.md](./explanation.md)
-6. 将 transformer 输出向量中的 class token 项送入一个分类头中，用于分类任务。（这个分类头在微调时是一个简单的线性层。）
+    * Norm（Normalization Layer） 层：即归一化层
+    * Mult-Head Attention：多头注意力层
+    * MLP（Multilayer Perceptron）：即多层感知机，也就是全连接层
+6. 将 transformer 输出向量中的 class token 项送入一个分类头（仍是全连接多层感知机）中，对其作分类。（这个分类头在 fine-tune（微调）时是一个简单的线性层。）
 
 同时，这个模型也可以和普通 CNN 模型结合使用：
 
@@ -203,15 +210,15 @@ $$
 
 # Task3.2
 
-## CNN 与 VIT 的区别
+### CNN 与 VIT 的区别
 
 * Vision Transformer 的自注意力机制允许模型将整个图像切成多个块，像处理序列（如自然语言）一样关注图像的全局特征，它可以考虑任何两个不相邻 patch 之间的特征。而 CNN 由于卷积核的局部性，只能关注局部区域的特征。
 * CNN 通过卷积核的共享参数，可以减少参数量，提高计算效率。而 VIT 的参数量较大，计算效率较低。
 * 与 CNN 不同，ViT 并没有内置很多图像相关的先验知识，更多依赖数据集来学习图像中的空间关系。
 
-## VIT 与 CNN 的优缺点
+### VIT 与 CNN 的优缺点
 
-## VIT
+#### VIT
 
 优点：
 
@@ -223,7 +230,7 @@ $$
 * 参数量较大，计算效率较低。
 * VIT 更多依赖数据集来学习图像中的空间关系。
 
-## CNN
+#### CNN
 
 优点：
 
