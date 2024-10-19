@@ -244,4 +244,52 @@ $$
 
 # Task3.3
 
-/* TODO */
+### ResNet-18
+
+#### 在 patch_size = 64; learning_rate = 0.0001 的情况下
+
+```
+Epoch [1/10], Loss: 1.7264, Accuracy: 37.73%
+Epoch [2/10], Loss: 1.2100, Accuracy: 56.67%
+Epoch [3/10], Loss: 1.0058, Accuracy: 64.34%
+Epoch [4/10], Loss: 0.8559, Accuracy: 69.82%
+Epoch [5/10], Loss: 0.7245, Accuracy: 74.68%
+Epoch [6/10], Loss: 0.6057, Accuracy: 78.96%
+Epoch [7/10], Loss: 0.4916, Accuracy: 83.31%
+Epoch [8/10], Loss: 0.3875, Accuracy: 86.81%
+Epoch [9/10], Loss: 0.2936, Accuracy: 90.04%
+Epoch [10/10], Loss: 0.2269, Accuracy: 92.49%
+Accuracy of the model on the 10000 test images: 66.77%
+```
+
+* 训练时间：6min
+* 最终准确率：66.77%
+
+#### 在较小 patch_size 下：patch_size = 32
+
+```
+Epoch [1/10], Loss: 1.6220, Accuracy: 41.13%
+Epoch [2/10], Loss: 1.1645, Accuracy: 58.16%
+Epoch [3/10], Loss: 0.9800, Accuracy: 65.01%
+Epoch [4/10], Loss: 0.8381, Accuracy: 70.44%
+Epoch [5/10], Loss: 0.7152, Accuracy: 74.76%
+Epoch [6/10], Loss: 0.5995, Accuracy: 78.98%
+Epoch [7/10], Loss: 0.4974, Accuracy: 82.69%
+Epoch [8/10], Loss: 0.4036, Accuracy: 85.87%
+Epoch [9/10], Loss: 0.3242, Accuracy: 88.74%
+Epoch [10/10], Loss: 0.2588, Accuracy: 91.04%
+Accuracy of the model on the 10000 test images: 67.78%
+```
+
+* 训练时间：10min
+* 最终准确率：67.78%
+
+可以看到，patch_size 几乎不影响模型的最终准确率。但是当 patch_size 减小时，训练时间明显增加。并且准确率曲线变化相对更加平缓，收敛速度变慢。
+
+### ViT
+
+vit.py 输出：
+
+```
+实在是跑不出来了（哭
+```

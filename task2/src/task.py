@@ -26,18 +26,20 @@ learning_rate = 0.001  # 学习率，即梯度下降算法中，负梯度的系�
 num_epochs = 10  # 训练的轮数
 
 # 转换为 pytorch 要求的 tensor 格式
-transform = transforms.Compose([transforms.ToTensor()])
+transform = transforms.Compose([
+    transforms.ToTensor()
+])
 
 # 构造训练集和测试集(root可以换为你自己的路径)
 trainset = torchvision.datasets.CIFAR10(
-    root="../data", train=True, download=True, transform=transform
+    root="./task2/data", train=True, download=True, transform=transform
 )
 trainloader = DataLoader(
     trainset, batch_size=batch_size, shuffle=True
 )  # mini-batch 在这里使用
 
 testset = torchvision.datasets.CIFAR10(
-    root="../data", train=False, download=True, transform=transform
+    root="./task2/data", train=False, download=True, transform=transform
 )
 testloader = DataLoader(testset, batch_size=batch_size, shuffle=False)
 

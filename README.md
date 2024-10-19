@@ -29,6 +29,7 @@ $ pip install -r requirements.txt
 * torchvision
 * matplotlib
 * transformers
+* timm
 
 in `./requirements.txt`
 
@@ -113,6 +114,7 @@ six                1.16.0
 stack-data         0.6.3
 sympy              1.13.3
 threadpoolctl      3.5.0
+timm               1.0.11
 tokenizers         0.20.1
 torch              2.4.1
 torchvision        0.19.1

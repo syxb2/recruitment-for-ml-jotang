@@ -5,9 +5,9 @@ import pandas # 加载 csv 数据集
 # test_file_path = '/Users/baijiale/Documents/Code/recruitment_for_ml_jotang/task1/data/test.csv'
 # sub_file_path = '/Users/baijiale/Documents/Code/recruitment_for_ml_jotang/task1/data/submission_example.csv'
 
-train_file_path = '../data/train.csv'
-test_file_path = '../data/test.csv'
-sub_file_path = '../data/submission_example.csv'
+train_file_path = './task1/data/train.csv'
+test_file_path = './task1/data/test.csv'
+sub_file_path = './task1/data/submission_example.csv'
 
 # 加载 csv 文件
 train_data = pandas.read_csv(train_file_path)
