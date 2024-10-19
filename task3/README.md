@@ -291,5 +291,22 @@ Accuracy of the model on the 10000 test images: 67.78%
 vit.py 输出：
 
 ```
-实在是跑不出来了（哭
+Epoch [1/10], Loss: 1.8650, Accuracy: 30.13%
+Epoch [2/10], Loss: 1.6320, Accuracy: 39.58%
+Epoch [3/10], Loss: 1.4742, Accuracy: 46.09%
+Epoch [4/10], Loss: 1.3559, Accuracy: 50.97%
+Epoch [5/10], Loss: 1.2781, Accuracy: 53.97%
+Epoch [6/10], Loss: 1.2094, Accuracy: 56.51%
+Epoch [7/10], Loss: 1.1513, Accuracy: 58.74%
+Epoch [8/10], Loss: 1.1059, Accuracy: 60.25%
+Epoch [9/10], Loss: 1.0586, Accuracy: 61.93%
+Epoch [10/10], Loss: 1.0210, Accuracy: 63.27%
+Accuracy of the model on the 10000 test images: 64.80%
 ```
+
+* 训练时间：63min
+* 最终准确率：64.80%
+
+可以看到，ViT 训练时准确率收敛速度很慢，且曲线平缓。并且 ViT 训练时间相比传统 CNN 网络明显要长。而且 ViT 不会出现 ResNet 测试集相对训练集准确率骤降的问题，ViT 的测试最终准确率甚至高于训练的最后一个循环。
+
+我认为出现这种情况的原因是 ViT（Transformer）的参数量远高于传统 CNN 网络，这就使得 ViT 的泛化性要强于传统 CNN。所以 ViT 训练所耗时间明显更长，且不会出现测试时准确率骤降的问题。

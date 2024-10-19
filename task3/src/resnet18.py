@@ -43,8 +43,10 @@ testloader = DataLoader(testset, batch_size=batch_size, shuffle=True)
 # print(models)
 # model = timm.create_model("vit_base_patch16_224", pretrained=False)
 model = timm.create_model("resnet18", pretrained=False)
-num_features = model.fc.in_features  # 获取 ResNet 最后一层的输入特征数
-model.fc = nn.Linear(num_features, 10)  # 将最后的全连接层替换为一个新的，输出类别数为10
+num_features = model.fc.in_features  # * 获取 ResNet 最后一层的输入特征数
+model.fc = nn.Linear(
+    num_features, 10
+)  # * 将最后的全连接层替换为一个新的，输出类别数为10
 model.to(device)
 model.train()
 
