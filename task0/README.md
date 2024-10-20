@@ -86,21 +86,21 @@ $$
 
 ### 1. 对输出层梯度公式、隐藏层梯度公式的理解
 
-![](https://p.sda1.dev/19/e0a076d611279aebe95cda9746ca176c/截屏2024-10-08下午8.12.40.png)
+![](https://i0.hdslb.com/bfs/article/61ad3f86eb2be50b797399e98b95f77124550465.png)
 
 ### 2. 对反向传播算法的理解
 
-![](https://p.sda1.dev/19/ea5b840adc8d96cbc99fde614c72d57f/截屏2024-10-08下午8.14.42.png)
+![](https://i0.hdslb.com/bfs/article/c9c52e1c741fac7a7733295daa12988f24550465.png)
 
 ### 3. 对梯度下降、随机梯度下降、混合型梯度下降的理解
 
-![](https://p.sda1.dev/19/3f9370b1613209f568eaf2cef3c5cffd/截屏2024-10-08下午8.16.00.png)
+![](https://i0.hdslb.com/bfs/article/b1bfc5305a33af9c85226366e54edf4a24550465.png)
 
 <!-- ps：请忽略我的烂字 -->
 
 ### 4. 对激活函数的理解
 
-![](https://p.sda1.dev/19/2ed53c509077109aa3d98ae05f5bd19b/截屏2024-10-08下午8.18.06.png)
+![](https://i0.hdslb.com/bfs/article/46cae3d763d68d55df2f275e16611d7924550465.png)
 
 激活函数也就是节点中要进行的计算（将输入信号转换为输出信号）。类似人神经元中电信号输入输出的转换。
 
@@ -108,11 +108,11 @@ $$
 
 ### 5. 对 logistic 激活函数的理解（回归和分类的关系）
 
-![](https://p.sda1.dev/19/422f1d53b371ce08caf057bcc3c1ff76/截屏2024-10-12下午8.52.01.png)
+![](https://i0.hdslb.com/bfs/article/e17b4e9592af6c1331d800e2e884691e24550465.png)
 
 ### 6. 为什么要引入激活函数？
 
-![](https://p.sda1.dev/19/476a738ca694b927ca3a9c606ee8ce49/截屏2024-10-12下午8.53.32.png)
+![](https://i0.hdslb.com/bfs/article/e31b7a9d7f887ed2d9090b3036fbcd7624550465.png)
 
 ### 7. softmax 函数的理解
 
@@ -120,4 +120,4 @@ $$
 
 对多分类损失函数的理解：
 
-![](https://p.sda1.dev/19/15dcb5e9683f995f0f6b209afca8ccd0/截屏2024-10-12下午9.01.28.png)
+![](https://i0.hdslb.com/bfs/article/be5c1d3d6dc21ade23c9a3f3c532a98f24550465.png)
