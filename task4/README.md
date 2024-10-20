@@ -62,7 +62,7 @@ Transformer是一个由Google提出的神经网络架构，广泛应用于NLP任
 
 原文算法：
 
-![](https://p.sda1.dev/19/c7f33884ea6abc384d354848c7007505/截屏2024-10-14下午8.30.46.png)
+![](https://i0.hdslb.com/bfs/article/54f24448f834f91486e2a6d6d1c9588d24550465.png)
 
 #### 水印检测：
 
@@ -84,7 +84,7 @@ Transformer是一个由Google提出的神经网络架构，广泛应用于NLP任
 
 原文算法：
 
-![](https://p.sda1.dev/19/6b7f83f60a74bed18433cb3fc94f94a5/截屏2024-10-14下午8.31.39.png)
+![](https://i0.hdslb.com/bfs/article/3a1ae7a33cc877406ff655462e768fc824550465.png)
 
 且只要低熵序列被包装在具有足够总熵的段落中，该段落仍将轻松触发水印检测器，从而解决了软水印中描述的低熵文本难以处理的问题。
 
@@ -154,7 +154,7 @@ https://github.com/jwkirchenbauer/lm-watermarking.git
 
 复现效果截图：
 
-![](https://p.sda1.dev/19/080bd8529415c033137db87d4dee4d25/截屏2024-10-15下午5.58.43.png)
+![](https://i0.hdslb.com/bfs/article/34944f5b8edb64545d08e9fb9b5995c424550465.png)
 
 shell 输出：
 
@@ -284,7 +284,7 @@ def _compute_z_score(self, observed_count, T):
 
 * 这个方法用于计算 $z$ 标准值，Z分数衡量的是观察值与期望值之间的差距，并以标准差为单位。论文中：
 
-![](https://p.sda1.dev/19/fdc11fabe315a1b8ba4195b257b3db5c/截屏2024-10-15下午8.22.14.png)
+![](https://i0.hdslb.com/bfs/article/aa5fe26b04a02b0ebf88fa85abaac7d824550465.png)
 
 就是 (x - 均值)/标准差
 
@@ -329,7 +329,7 @@ device = "mps" if torch.backends.mps.is_available() else "cpu"
 
 生成结果以及所耗时间：
 
-![](https://p.sda1.dev/19/d409df19d45f221ac943519eb68c8eca/截屏2024-10-15下午5.51.35.png)
+![](https://i0.hdslb.com/bfs/article/a4bc58226ea9954cf87fe80594d267f824550465.png)
 
 * 消耗时间：24s 左右
 
@@ -340,7 +340,7 @@ device = 'cpu'
 ```
 生成结果以及所耗时间：
 
-![](https://p.sda1.dev/19/c0256560c8433b1f15a17f36d2254834/截屏2024-10-15下午5.53.56.png)
+![](https://i0.hdslb.com/bfs/article/723d20e714987d0ba81c980d2f73aa1e24550465.png)
 
 * 消耗时间：7s 左右
 

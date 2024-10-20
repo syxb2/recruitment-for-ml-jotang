@@ -49,7 +49,7 @@ Transformer 的目标就是通过逐步调整（为向量增加方向）这些�
 
 即嵌入矩阵的转置，它将预测的嵌入向量通过矩阵乘法，softmax（将 logits 输出转换为概率） 转换为预测的 token。
 
-![](https://p.sda1.dev/19/d4b86b4110627774d79c0ac936f6935a/截屏2024-10-18上午9.21.42.png)
+![](https://i0.hdslb.com/bfs/article/73f80d946ef6f6bf345192daff91c96824550465.png)
 
 ## Attention
 
@@ -63,7 +63,7 @@ Transformer 的目标就是通过逐步调整（为向量增加方向）这些�
 
 显然，这三个句子中 mole 的意思是不同的，但它经过嵌入矩阵（查找表）转化之后，它们的嵌入向量都是相同的。经过 Attention，周围的信息才可以传入这个向量：多维嵌入空间有多个方向，编码了 mole 一词不同的含义，而训练的好的 Attention 模块能计算出需要给初始向量添加什么向量，才能把它移动到上下文对应的方向上
 
-![](https://p.sda1.dev/19/58d568f6cefc3f06ddabf32358ddf6ee/截屏2024-10-18上午9.44.25.png)
+![](https://i0.hdslb.com/bfs/article/bcf3adf07bee13548898e81ac8955e5f24550465.png)
 
 Attention 模块还允许模型相互传递嵌入向量蕴含的信息。且预测（分类）下一个 token 的计算过程完全基于序列中的最后一个向量。
 
@@ -75,9 +75,9 @@ Attention 模块还允许模型相互传递嵌入向量蕴含的信息。且预�
 
 ### Single-Head Attention
 
-![](https://p.sda1.dev/19/cefac533c2477bec630c30be667426a7/截屏2024-10-17下午9.06.53.png)
+![](https://i0.hdslb.com/bfs/article/f01938a16ee31bf7a314c508a7c13dae24550465.png)
 
-![](https://p.sda1.dev/19/824305234211d380a3f3770d104e46f7/截屏2024-10-17下午9.10.54.png)
+![](https://i0.hdslb.com/bfs/article/6cdc8dab7c1770e0bce2d2741643fe1924550465.png)
 
 * $d_k$ 是 Q、K token 的嵌入向量的长度
 * $d_v$ 是 V 中转化为的嵌入向量的长度
@@ -92,7 +92,7 @@ Attention 模块还允许模型相互传递嵌入向量蕴含的信息。且预�
 
 相当于将 Embedding 空间的高维向量 E 映射到低维 Query 空间，用这个低维向量编码“要查询XXX”的概念
 
-![](https://p.sda1.dev/19/5b2b07f4a53704a084d4e29e4bb9d096/截屏2024-10-18下午4.45.52.png)
+![](https://i0.hdslb.com/bfs/article/db4424842817bf6d4a0409b4a33bfb5a24550465.png)
 
 #### Key vectors
 
@@ -102,11 +102,11 @@ Attention 模块还允许模型相互传递嵌入向量蕴含的信息。且预�
 
 和 Q 一样，Key matrix 也会将 E 映射到一个低维 Key 空间（通常与 Query 的维度(128)相同（行数相同））。当 Query 向量和 Key 向量对齐时，我们就说他们相互匹配。
 
-![](https://p.sda1.dev/19/0485e73ba1a2c6a5b043ccc1f628e3cc/截屏2024-10-18下午4.55.14.png)
+![](https://i0.hdslb.com/bfs/article/e94daf51050136bbb9449393510d6c6024550465.png)
 
 为了衡量每个 Key 和每个 Query 的匹配程度，要计算所有可能的 Key-Query 向量对之间的点积
 
-![](https://p.sda1.dev/19/406b9d676d310b441ab14ee1ec52150d/截屏2024-10-18下午4.59.44.png)
+![](https://i0.hdslb.com/bfs/article/a083b2e6e7fd983abc4a1755abcb563e24550465.png)
 
 对于我们这个例子，Q_creatrue 和 K_blue、K_fluffy 高度对齐（点积相对更大）。
 
@@ -116,7 +116,7 @@ Attention 模块还允许模型相互传递嵌入向量蕴含的信息。且预�
 
 之后再分别对 $Q*K$ 的每一列 softmax，使之转化为`权重`
 
-![](https://p.sda1.dev/19/8ccaccbb90c6f95de0feb73719ee386d/截屏2024-10-18下午5.03.31.png)
+![](https://i0.hdslb.com/bfs/article/9d5bea97fb47580f0c28d3a10411b92824550465.png)
 
 得到的这个矩阵，表示每个 Key 和每个 Query 的相关度，我们称这个矩阵为`Attention Partten`（注意力模式）(大小为 token_num^2)
 
@@ -124,7 +124,7 @@ Attention 模块还允许模型相互传递嵌入向量蕴含的信息。且预�
 
 并且我们会充分利用每一个训练样本，对一个样本而言，我们会：
 
-![](https://p.sda1.dev/19/6fb7dca886351e0461f450bc4f24163d/截屏2024-10-18下午5.10.48.png)
+![](https://i0.hdslb.com/bfs/article/de32c34c6de3054cf0eb736b957f00d524550465.png)
 
 这就要求我们不能泄漏后词（不能让后面的单词影响前面的单词），**也就是 Query 的结果 Key 只能是 Query 前面的词。（对 creature 来说只有它前面两个形容词 blue 和 fluffy）
 
@@ -136,7 +136,7 @@ Attention 模块还允许模型相互传递嵌入向量蕴含的信息。且预�
 
 但 Value 矩阵不会改变 E 的维度。所以 Value 矩阵的大小为 E 维度的平方(12288^2)。
 
-![](https://p.sda1.dev/19/b168076d8bc2ee1e6ed612dc2b713324/截屏2024-10-18下午5.32.53.png)
+![](https://i0.hdslb.com/bfs/article/1eac5d84fd351e296459c3df86e258d524550465.png)
 
 对于网络中的每一列，给每个 Value vector 乘上对应的权重，再将它们相加，得到的就是 ΔE 向量。E 和 ΔE 相加，即为更新之后的 embedding matrix。
 
@@ -152,15 +152,15 @@ $$
 W_V = Value_{up} * Value_{down}
 $$
 
-![](https://p.sda1.dev/19/c9b444c3bdfb36ebf73ffb6fa5e6bce1/截屏2024-10-18下午5.53.02.png)
+![](https://i0.hdslb.com/bfs/article/5288e2bc2fce75ddc72ef7491014e51224550465.png)
 
 ### Multi-headed attention
 
-![](https://p.sda1.dev/19/06e02bbd1c44a95cfc920163f62c6cb0/截屏2024-10-17下午9.13.01.png)
+![](https://i0.hdslb.com/bfs/article/9e6d526f5c29caff61c5677434c9095e24550465.png)
 
 每个头关注一个“前词对本词的影响方式”也可以说是“根据上下文来改变 token 语义的一个方式”
 
-![](https://p.sda1.dev/19/2a631be2a01a1c0a726658d2d160eede/截屏2024-10-18下午5.58.32.png)
+![](https://i0.hdslb.com/bfs/article/e582c0b3cdc91f6e4b44723f0b098a7e24550465.png)
 
 * 每个头都有单独的 $W_Q$、$W_K$、$W_V$
 
@@ -168,7 +168,7 @@ $$
 
 值得注意的是，在实际的应用中，常常将多个头的 $Value_{up}$ 拼接合并为一个 Output Matrix，而每个头中的 Value map 单指 $Value_{down}$ 矩阵：
 
-![](https://p.sda1.dev/19/c35e5f1da67ebce383b1d1716e2fcb75/截屏2024-10-18下午7.17.48.png)
+![](https://i0.hdslb.com/bfs/article/ba03679d23a1cdaefbb3cbb1e784f29024550465.png)
 
 ## 2、以一段 pytorch 实现 Scaled Dot-product Attention 的代码为例，简要说明 scaled dot-product attention 的计算过程
 
@@ -182,7 +182,7 @@ $$
 
 这是本论文提出的模型结构：
 
-![](https://p.sda1.dev/19/089c65ea4eb69468ded7bc742d761468/截屏2024-10-17下午4.17.14.png)
+![](https://i0.hdslb.com/bfs/article/e4dfe7f8f3c1808fb2d87786fa7ed40524550465.png)
 
 假设输入图像大小为 $H*W$
 
