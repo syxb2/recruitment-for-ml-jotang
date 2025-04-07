@@ -1,9 +1,9 @@
 import pandas # 加载 csv 数据集
 
 # 由于 MacOS python 只能使用绝对路径
-# train_file_path = '/Users/baijiale/Documents/Code/recruitment_for_ml_jotang/task1/data/train.csv'
-# test_file_path = '/Users/baijiale/Documents/Code/recruitment_for_ml_jotang/task1/data/test.csv'
-# sub_file_path = '/Users/baijiale/Documents/Code/recruitment_for_ml_jotang/task1/data/submission_example.csv'
+# train_file_path = '/Users/baijiale/Code/recruitment_for_ml_jotang/task1/data/train.csv'
+# test_file_path = '/Users/baijiale/Code/recruitment_for_ml_jotang/task1/data/test.csv'
+# sub_file_path = '/Users/baijiale/Code/recruitment_for_ml_jotang/task1/data/submission_example.csv'
 
 train_file_path = './task1/data/train.csv'
 test_file_path = './task1/data/test.csv'
